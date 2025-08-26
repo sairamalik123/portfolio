@@ -1,0 +1,172 @@
+
+:root{
+  --bg: #0b0f1a;
+  --bg-soft: #0f1626;
+  --card: #121a2b;
+  --text: #dbeafe;
+  --muted: #9aa4b2;
+  --brand: #7c3aed;
+  --brand-2: #06b6d4;
+  --accent: #22c55e;
+  --ring: rgba(124,58,237,0.45);
+  --shadow: 0 10px 30px rgba(2,10,20,.35);
+}
+:root.light{
+  --bg: #f8fafc;
+  --bg-soft: #eef2ff;
+  --card: #ffffff;
+  --text: #0b1220;
+  --muted: #475569;
+  --brand: #6d28d9;
+  --brand-2: #0891b2;
+  --accent: #16a34a;
+  --ring: rgba(8,145,178,0.35);
+  --shadow: 0 12px 30px rgba(9,9,12,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.15), transparent 70%),
+              radial-gradient(1000px 500px at 90% 10%, rgba(6,182,212,.15), transparent 70%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+nav{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter: saturate(140%) blur(8px);
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+  border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{width:28px;height:28px}
+.brand span{font-weight:700;letter-spacing:.4px}
+nav .links a{
+  color:var(--text);text-decoration:none;margin:0 10px;font-weight:500;opacity:.85
+}
+nav .links a:hover{opacity:1}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:white;padding:12px 18px;border-radius:14px;border:none;cursor:pointer;
+  box-shadow: var(--shadow);
+}
+.btn.ghost{
+  background:transparent;border:1px solid color-mix(in oklab, var(--text) 12%, transparent);
+  color:var(--text);box-shadow:none
+}
+#themeToggle{border-radius:12px;padding:10px 12px}
+.hero{
+  padding:72px 0 36px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center
+}
+.hero h1{font-size: clamp(32px, 4vw, 56px);line-height:1.1;margin:0}
+.hero p{color:var(--muted);font-size:18px;margin-top:12px}
+.kpis{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}
+.kpi{padding:14px 16px;border-radius:14px;background: color-mix(in oklab, var(--card) 85%, transparent 15%);box-shadow:var(--shadow);border:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
+.kpi strong{font-size:20px}
+.card{
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), color-mix(in oklab, var(--bg) 90%, transparent));
+  border:1px solid color-mix(in oklab, var(--text) 10%, transparent);
+  border-radius:18px;padding:22px;box-shadow:var(--shadow)
+}
+.section{padding:52px 0}
+.section h2{font-size:28px;margin:0 0 16px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
+.col-6{grid-column: span 6}
+.col-4{grid-column: span 4}
+.col-12{grid-column: span 12}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;
+  border:1px solid color-mix(in oklab, var(--text) 12%, transparent);margin:4px 6px 0 0;color:var(--muted);font-size:12px
+}
+.timeline{position:relative;padding-left:24px}
+.timeline:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background: color-mix(in oklab, var(--text) 12%, transparent)}
+.tl-item{position:relative;padding:10px 0 10px 12px}
+.tl-item:before{content:"";position:absolute;left:-2px;top:16px;width:10px;height:10px;border-radius:50%;background: linear-gradient(135deg, var(--brand), var(--brand-2))}
+footer{padding:26px 0;color:var(--muted);border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent);margin-top:36px}
+.projects .card{transition:transform .25s ease, box-shadow .25s ease}
+.projects .card:hover{transform:translateY(-4px)}
+.project-links a{margin-right:10px}
+.badge{padding:4px 8px;border-radius:999px;background: color-mix(in oklab, var(--brand) 18%, transparent);border:1px solid color-mix(in oklab, var(--brand) 40%, transparent);color:var(--text);font-size:12px}
+@media (max-width: 920px){
+  .hero-grid{grid-template-columns:1fr}
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.9s ease;
+}
+.slide-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.9s ease;
+}
+.slide-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hero headline typing/fade effect */
+.hero h1 {
+  animation: fadeInUp 1.2s ease both;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button hover spring effect */
+.btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 36px rgba(124, 58, 237, 0.4);
+}
+
+/* Card hover glow */
+.projects .card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(6, 182, 212, 0.35);
+}
+/* Contact section link styling */
+#contact a {
+  color: var(--accent);   /* use your accent color instead of default blue */
+  text-decoration: none;
+  word-break: break-word; /* wrap long links inside card */
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Make sure text inside cards is responsive */
+#contact p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.95rem;
+}
