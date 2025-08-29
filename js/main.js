@@ -56,13 +56,22 @@ revealElements.forEach(el => observer.observe(el));
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
+  const status = document.getElementById("status"); // <p id="status"> use karo form me
+  status.style.color = "gray";
+  status.innerText = "⏳ Sending message...";
+
   emailjs.sendForm("service_56ua4wk", "template_kywyazi", this)
     .then(() => {
-      alert("✅ Message sent successfully!");
+      status.style.color = "green";
+      status.innerText = "✅ Message sent successfully!";
+      this.reset(); // ✅ form inputs clear kar do
     }, (error) => {
-      alert("❌ Failed to send message. " + JSON.stringify(error));
+      status.style.color = "red";
+      status.innerText = "❌ Failed to send. Please try again.";
+      console.error("EmailJS Error:", error);
     });
 });
+
 
 
 
