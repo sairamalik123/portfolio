@@ -56,34 +56,17 @@
         </div>
       </div>
       <div>
-        <!-- <div class="card" style="text-align:center">
-          <img src="assets/profile.JPG" alt="Profile illustration" style="width:100%;max-width:260px;border-radius:18px;box-shadow:var(--shadow)">
-          <div style="margin-top:14px">
-            <span class="badge">Open to Collaboration</span>
-          </div>
-        </div> -->
-
         <div class="card" style="text-align:center">
           <img src="assets/profile.JPG" alt="Profile illustration"
             style="width:100%;max-width:260px;border-radius:18px;box-shadow:var(--shadow)">
-
           <div style="margin-top:14px">
-            <form action="https://formspree.io/f/your_form_id" method="POST"
-              style="display:inline-block; text-align:left; max-width:300px;">
-              <input type="text" name="name" placeholder="Your Name" required
-                style="width:100%; padding:8px; margin:6px 0; border-radius:6px; border:1px solid #ccc;">
-              <input type="email" name="email" placeholder="Your Email" required
-                style="width:100%; padding:8px; margin:6px 0; border-radius:6px; border:1px solid #ccc;">
-              <textarea name="message" placeholder="Your Message" required
-                style="width:100%; padding:8px; margin:6px 0; border-radius:6px; border:1px solid #ccc;"></textarea>
-              <button type="submit"
-                style="background:#007acc; color:#fff; padding:10px 18px; border:none; border-radius:6px; cursor:pointer; font-weight:600;">
-                Send Message
-              </button>
-            </form>
+            <!-- <span class="badge">Open to Collaboration</span> -->
+            <a href="#contact" style="text-decoration:none;">
+              <span class="badge">Open to Collaboration</span>
+            </a>
+
           </div>
         </div>
-
       </div>
     </div>
   </header>
@@ -339,6 +322,25 @@
         </div>
       </div>
     </section>
+    <div class="col-12 fade-up" style="margin-top:20px;">
+  <div class="card">
+    <h2>Collaborate with Me</h2>
+    <form id="contact-form">
+      <input type="text" name="user_name" placeholder="Your Name" required 
+             style="width:100%;max-width:400px;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ccc;"><br>
+      <input type="email" name="user_email" placeholder="Your Email" required 
+             style="width:100%;max-width:400px;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ccc;"><br>
+      <textarea name="message" placeholder="Your Message" required 
+                style="width:100%;max-width:400px;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ccc;"></textarea><br>
+      <button type="submit" 
+              style="background:#007acc;color:#fff;padding:10px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;">
+        Send
+      </button>
+    </form>
+    <p id="status"></p>
+  </div>
+</div>
+
   </main>
 
   <footer>

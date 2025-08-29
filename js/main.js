@@ -22,6 +22,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 // Current year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// initialize EmailJS
+(function() {
+  emailjs.init("I0V7Lpa_CjzQiyId7"); // <-- apna public key yahan daalo
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_56ua4wk", "template_kywyazi", this)
+    .then(function() {
+      document.getElementById("status").innerText = "✅ Message sent successfully!";
+    }, function(error) {
+      document.getElementById("status").innerText = "❌ Failed to send message. Try again.";
+      console.error("EmailJS Error:", error);
+    });
+});
+
 // Scroll reveal
 const revealElements = document.querySelectorAll('.fade-up, .slide-left, .slide-right');
 const observer = new IntersectionObserver(entries => {
