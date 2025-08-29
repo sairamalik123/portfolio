@@ -34,3 +34,20 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 revealElements.forEach(el => observer.observe(el));
+
+// Initialize EmailJS
+(function() {
+  emailjs.init("I0V7Lpa_CjzQiyId7"); // Replace with your actual Public Key
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_56ua4wk", "template_kywyazi", this)
+    .then(function() {
+      document.getElementById("status").innerText = "✅ Message sent successfully!";
+    }, function(error) {
+      document.getElementById("status").innerText = "❌ Failed to send. Try again.";
+      console.error("EmailJS Error:", error);
+    });
+});

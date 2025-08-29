@@ -47,9 +47,15 @@
       <div>
         <div class="card" style="text-align:center">
           <img src="assets/profile.JPG" alt="Profile illustration" style="width:100%;max-width:260px;border-radius:18px;box-shadow:var(--shadow)">
-          <div style="margin-top:14px">
+          <!-- <div style="margin-top:14px">
             <span class="badge">Open to Collaboration</span>
-          </div>
+          </div> -->
+          <div style="margin-top:14px">
+  <a href="#contact" class="badge" style="text-decoration:none; cursor:pointer;">
+    Open to Collaboration
+  </a>
+</div>
+
         </div>
       </div>
     </div>
@@ -258,6 +264,13 @@
           <div class="card">
             <h2>Contact</h2>
             <p>Want to collaborate or discuss a role? Reach out:</p>
+             <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required style="margin:6px 0; width:100%; padding:8px; border-radius:6px;">
+    <input type="email" name="user_email" placeholder="Your Email" required style="margin:6px 0; width:100%; padding:8px; border-radius:6px;">
+    <textarea name="message" placeholder="Your Message" required style="margin:6px 0; width:100%; padding:8px; border-radius:6px; height:100px;"></textarea>
+    <button type="submit" class="btn" style="margin-top:10px;">Send Message</button>
+    <p id="status" style="margin-top:10px; font-size:14px; color:gray;"></p>
+  </form>
             <p style="margin:10px 0 0"><strong>Email:</strong> <a href="mailto:sairaluqman366@gmail.com" target="_blank">sairaluqman366@gmail.com</a></p>
             <p style="margin:6px 0 0"><strong>Phone:</strong> +92 3136756843</p>
             <p style="margin:6px 0 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sairaluqman/"  target="_blank" rel="noopener">sairaluqman</a></p>
