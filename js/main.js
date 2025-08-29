@@ -37,7 +37,7 @@ revealElements.forEach(el => observer.observe(el));
 
 // Initialize EmailJS
 (function() {
-  emailjs.init("I0V7Lpa_CjzQiyId7"); // Replace with your actual Public Key
+  emailjs.init("jevU5yT0X2wtuci16"); // Replace with your actual Public Key
 })();
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -50,4 +50,26 @@ document.getElementById("contact-form").addEventListener("submit", function(even
       document.getElementById("status").innerText = "❌ Failed to send. Try again.";
       console.error("EmailJS Error:", error);
     });
+});
+
+// Contact Form Submission with EmailJS
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_56ua4wk", "template_kywyazi", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
+    }, (error) => {
+      alert("❌ Failed to send message. " + JSON.stringify(error));
+    });
+});
+
+
+
+// Navbar Toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });

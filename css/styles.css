@@ -170,3 +170,47 @@ footer{padding:26px 0;color:var(--muted);border-top:1px solid color-mix(in oklab
   overflow-wrap: break-word;
   font-size: 0.95rem;
 }
+
+
+/* Default navbar styles */
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hamburger hidden on desktop */
+#menuToggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+}

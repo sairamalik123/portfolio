@@ -1,15 +1,25 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Saira Luqman — Portfolio</title>
-  <meta name="description" content="Saira Luqman — Computer Engineering graduate and System Engineer at Mahr Textiles. Full-stack developer with MERN expertise, blockchain, AI/ML, and computer vision projects.">
+  <meta name="description"
+    content="Saira Luqman — Computer Engineering graduate and System Engineer at Mahr Textiles. Full-stack developer with MERN expertise, blockchain, AI/ML, and computer vision projects.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 <body>
-  <nav>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("jevU5yT0X2wtuci16"); // 🔑 apna EmailJS Public Key yahan dalna
+  })();
+</script>
+  <!-- <nav>
     <div class="container nav-inner">
       <div class="brand">
         <img src="assets/favicon.svg" alt="S logo">
@@ -24,6 +34,30 @@
       </div>
       <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
     </div>
+  </nav> -->
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="assets/favicon.svg" alt="S logo">
+        <span>Saira Luqman</span>
+      </div>
+
+      <!-- Dark Mode Toggle -->
+      <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌓</button>
+
+      <!-- Hamburger Menu -->
+      <button id="menuToggle" class="btn ghost" aria-label="Menu">☰</button>
+
+      <!-- Nav Links -->
+      <div class="links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
   <header class="hero">
@@ -31,13 +65,21 @@
       <div>
         <h1>System Engineer & Full-Stack Developer</h1>
         <p>
-          Computer Engineering graduate currently working at <strong>Mahr Textiles</strong> as a System Engineer. Skilled in full-stack development (MERN), 
-          blockchain (Ethereum Sepolia), AI/ML, and secure system design. Passionate about building scalable applications and intelligent solutions.
+          Computer Engineering graduate currently working at <strong>Mahr Textiles</strong> as a System Engineer.
+          Skilled in full-stack development (MERN),
+          blockchain (Ethereum Sepolia), AI/ML, and secure system design. Passionate about building scalable
+          applications and intelligent solutions.
         </p>
         <div class="kpis">
-          <div class="kpi"><strong>Blockchain + QR</strong><div>Counterfeit detection & traceability</div></div>
-          <div class="kpi"><strong>AI/ML</strong><div>Prediction, CV, chatbots</div></div>
-          <div class="kpi"><strong>Unity</strong><div>2D/3D game systems</div></div>
+          <div class="kpi"><strong>Blockchain + QR</strong>
+            <div>Counterfeit detection & traceability</div>
+          </div>
+          <div class="kpi"><strong>AI/ML</strong>
+            <div>Prediction, CV, chatbots</div>
+          </div>
+          <div class="kpi"><strong>Unity</strong>
+            <div>2D/3D game systems</div>
+          </div>
         </div>
         <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
           <a class="btn" href="#projects">View Projects</a>
@@ -46,15 +88,16 @@
       </div>
       <div>
         <div class="card" style="text-align:center">
-          <img src="assets/profile.JPG" alt="Profile illustration" style="width:100%;max-width:260px;border-radius:18px;box-shadow:var(--shadow)">
+          <img src="assets/profile.JPG" alt="Profile illustration"
+            style="width:100%;max-width:260px;border-radius:18px;box-shadow:var(--shadow)">
           <!-- <div style="margin-top:14px">
             <span class="badge">Open to Collaboration</span>
           </div> -->
           <div style="margin-top:14px">
-  <a href="#contact" class="badge" style="text-decoration:none; cursor:pointer;">
-    Open to Collaboration
-  </a>
-</div>
+            <a href="#contact" class="badge" style="text-decoration:none; cursor:pointer;">
+              Open to Collaboration
+            </a>
+          </div>
 
         </div>
       </div>
@@ -68,13 +111,15 @@
           <div class="card">
             <h2>About</h2>
             <p>
-              Hi! I’m <strong>Saira Luqman</strong> — a Computer Engineering graduate with experience in 
-              full-stack web development, blockchain solutions, and AI-driven applications. I work as a 
-              <strong>System Engineer at Mahr Textiles</strong>, focusing on reliability, automation, and data-driven tools.
+              Hi! I’m <strong>Saira Luqman</strong> — a Computer Engineering graduate with experience in
+              full-stack web development, blockchain solutions, and AI-driven applications. I work as a
+              <strong>System Engineer at Mahr Textiles</strong>, focusing on reliability, automation, and data-driven
+              tools.
             </p>
             <p>
-              My Final Year Project was <strong>Detection of Counterfeit Products using Blockchain</strong>, 
-              leveraging smart contracts, QR codes, and digital signatures. I have also built AI chatbots for industry data, 
+              My Final Year Project was <strong>Detection of Counterfeit Products using Blockchain</strong>,
+              leveraging smart contracts, QR codes, and digital signatures. I have also built AI chatbots for industry
+              data,
               computer vision solutions in MATLAB, and Unity-based 2D/3D games.
             </p>
             <div>
@@ -91,22 +136,22 @@
             </div>
           </div>
         </div>
-      <div class="col-6">
-  <div class="card">
-    <h2>Quick Facts</h2>
-    <ul>
-      <li>Currently working as <strong>System Engineer at Mahr Textiles</strong></li>
-      <li>Final Year Project: <strong>Counterfeit Product Detection using Blockchain</strong></li>
-      <li>Internships: <strong>Devsinc (MERN)</strong>, <strong>PITB</strong></li>
-      <li>Additional professional experience: <strong>AAASK & Black Wolf Solutions</strong></li>
-      <li>Hands-on expertise in <strong>Blockchain, AI/ML, and Full-Stack Development</strong></li>
-      <li>Leadership roles in <strong>IEEE WIE, Microsoft Student Ambassador, SOFTEC participation</strong></li>
-    </ul>
-    <div style="margin-top:10px">
-      <a class="btn ghost" href="#experience">See timeline ↓</a>
-    </div>
-  </div>
-</div>
+        <div class="col-6">
+          <div class="card">
+            <h2>Quick Facts</h2>
+            <ul>
+              <li>Currently working as <strong>System Engineer at Mahr Textiles</strong></li>
+              <li>Final Year Project: <strong>Counterfeit Product Detection using Blockchain</strong></li>
+              <li>Internships: <strong>Devsinc (MERN)</strong>, <strong>PITB</strong></li>
+              <li>Additional professional experience: <strong>AAASK & Black Wolf Solutions</strong></li>
+              <li>Hands-on expertise in <strong>Blockchain, AI/ML, and Full-Stack Development</strong></li>
+              <li>Leadership roles in <strong>IEEE WIE, Microsoft Student Ambassador, SOFTEC participation</strong></li>
+            </ul>
+            <div style="margin-top:10px">
+              <a class="btn ghost" href="#experience">See timeline ↓</a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -116,19 +161,21 @@
         <h2>Experience</h2>
         <div class="card timeline">
           <div class="tl-item slide-left">
-            <strong>Mahr Textiles — System Engineer</strong> <span class="tag">August 2025 – Present · Sialkot · On-site</span> 
+            <strong>Mahr Textiles — System Engineer</strong> <span class="tag">August 2025 – Present · Sialkot ·
+              On-site</span>
             <div class="muted">System design • Reliability • Automation</div>
             <p>Working on production systems, automation, and data-driven dashboards for efficiency and accuracy.</p>
           </div>
           <div class="tl-item slide-right">
             <strong>Black Wolf — Associate software Engineer</strong>
-             <span class="tag">Jul 2024 – July 2025 · Lahore · On-site</span>
+            <span class="tag">Jul 2024 – July 2025 · Lahore · On-site</span>
             <div class="muted">Full-Stack Development • MERN Stack</div>
-            <p>Developed web applications using the MERN stack with a focus on responsive UIs, backend integration, and Agile collaboration.</p>
+            <p>Developed web applications using the MERN stack with a focus on responsive UIs, backend integration, and
+              Agile collaboration.</p>
           </div>
           <div class="tl-item slide-left">
             <strong>AAASK — Academic Coordinator</strong>
-             <span class="tag">Jan 2024 – Mar 2024 · Remote (UK)</span>
+            <span class="tag">Jan 2024 – Mar 2024 · Remote (UK)</span>
             <div class="muted">Academics • Coordination</div>
             <p>Worked on academic coordination and communication between teams.</p>
           </div>
@@ -156,18 +203,22 @@
           <div class="col-6">
             <div class="card">
               <h3>Counterfeit Product Detection using Blockchain</h3>
-              <p>Final Year Project: Smart contracts on Ethereum Sepolia, QR code signatures (RSA), OTP verification in Express/PostgreSQL, and role-based workflows.</p>
+              <p>Final Year Project: Smart contracts on Ethereum Sepolia, QR code signatures (RSA), OTP verification in
+                Express/PostgreSQL, and role-based workflows.</p>
               <div style="margin-top:10px">
-                <span class="tag">Blockchain</span><span class="tag">React</span><span class="tag">Node/Express</span><span class="tag">PostgreSQL</span><span class="tag">RSA</span>
+                <span class="tag">Blockchain</span><span class="tag">React</span><span
+                  class="tag">Node/Express</span><span class="tag">PostgreSQL</span><span class="tag">RSA</span>
               </div>
             </div>
           </div>
           <div class="col-6 fade-up">
             <div class="card">
               <h3>AI Chatbot for Industry</h3>
-              <p>Flask-based chatbot trained on production data; PostgreSQL integration for user input; model retraining with new data.</p>
+              <p>Flask-based chatbot trained on production data; PostgreSQL integration for user input; model retraining
+                with new data.</p>
               <div style="margin-top:10px">
-                <span class="tag">Flask</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">PostgreSQL</span>
+                <span class="tag">Flask</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span
+                  class="tag">PostgreSQL</span>
               </div>
             </div>
           </div>
@@ -183,7 +234,8 @@
           <div class="col-6 fade-up">
             <div class="card">
               <h3>Dinner Dash 2.0</h3>
-              <p>Web application developed during Devsinc internship with full-stack features and collaborative version control.</p>
+              <p>Web application developed during Devsinc internship with full-stack features and collaborative version
+                control.</p>
               <div style="margin-top:10px">
                 <span class="tag">MERN</span><span class="tag">Git</span>
               </div>
@@ -201,7 +253,8 @@
           <div class="col-6 fade-up">
             <div class="card">
               <h3>Unity Games Collection</h3>
-              <p>2D Dino, 3D Helicopter, FPS, Puzzle, and Night-Mode Football Ground. Focus on gameplay mechanics, tilemaps, and multiplayer using Photon PUN.</p>
+              <p>2D Dino, 3D Helicopter, FPS, Puzzle, and Night-Mode Football Ground. Focus on gameplay mechanics,
+                tilemaps, and multiplayer using Photon PUN.</p>
               <div style="margin-top:10px">
                 <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Photon PUN</span>
               </div>
@@ -236,24 +289,24 @@
             </div>
           </div>
         </div>
-      <div class="col-12 fade-up">
-  <div class="card">
-    <h2>Education & Highlights</h2>
-    <ul>
-      <li><strong>BS Computer Engineering</strong> — COMSATS University Islamabad (2021 — 2025)</li>
-      <li><strong>F.Sc. (Pre-Engineering)</strong> — Superior College (August 2021)</li>
-      <li><strong>Certificate of Web Designing</strong> — PBTE Lahore (March–August 2023)</li>
-      <li><strong>Training Course</strong> — PNY Trainings (Aug 2022 – Feb 2023)</li>
-      <li>Microsoft Student Ambassador — Microsoft (Jan 2024 – Present)</li>
-      <li>Campus Ambassador — SOFTEC (Jan 2023 – Present)</li>
-      <li>Director of Operations — COMSATS Lahore (Oct 2022 – Present)</li>
-      <li>Student Ambassador — Devsinc (Jul 2022 – Present)</li>
-      <li>Web Team Lead — IEEE RAS CUI Lahore (Mar 2022 – Sep 2024)</li>
-      <li>Certificate of Participation — COMSATS University Events</li>
-      <li>Management Role — COMSATS Lahore (Mar 2021 – Dec 2021)</li>
-    </ul>
-  </div>
-</div>
+        <div class="col-12 fade-up">
+          <div class="card">
+            <h2>Education & Highlights</h2>
+            <ul>
+              <li><strong>BS Computer Engineering</strong> — COMSATS University Islamabad (2021 — 2025)</li>
+              <li><strong>F.Sc. (Pre-Engineering)</strong> — Superior College (August 2021)</li>
+              <li><strong>Certificate of Web Designing</strong> — PBTE Lahore (March–August 2023)</li>
+              <li><strong>Training Course</strong> — PNY Trainings (Aug 2022 – Feb 2023)</li>
+              <li>Microsoft Student Ambassador — Microsoft (Jan 2024 – Present)</li>
+              <li>Campus Ambassador — SOFTEC (Jan 2023 – Present)</li>
+              <li>Director of Operations — COMSATS Lahore (Oct 2022 – Present)</li>
+              <li>Student Ambassador — Devsinc (Jul 2022 – Present)</li>
+              <li>Web Team Lead — IEEE RAS CUI Lahore (Mar 2022 – Sep 2024)</li>
+              <li>Certificate of Participation — COMSATS University Events</li>
+              <li>Management Role — COMSATS Lahore (Mar 2021 – Dec 2021)</li>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -264,19 +317,26 @@
           <div class="card">
             <h2>Contact</h2>
             <p>Want to collaborate or discuss a role? Reach out:</p>
-             <form id="contact-form">
-    <input type="text" name="user_name" placeholder="Your Name" required style="margin:6px 0; width:100%; padding:8px; border-radius:6px;">
-    <input type="email" name="user_email" placeholder="Your Email" required style="margin:6px 0; width:100%; padding:8px; border-radius:6px;">
-    <textarea name="message" placeholder="Your Message" required style="margin:6px 0; width:100%; padding:8px; border-radius:6px; height:100px;"></textarea>
-    <button type="submit" class="btn" style="margin-top:10px;">Send Message</button>
-    <p id="status" style="margin-top:10px; font-size:14px; color:gray;"></p>
-  </form>
-            <p style="margin:10px 0 0"><strong>Email:</strong> <a href="mailto:sairaluqman366@gmail.com" target="_blank">sairaluqman366@gmail.com</a></p>
+            <form id="contact-form">
+              <input type="text" name="user_name" placeholder="Your Name" required
+                style="margin:6px 0; width:100%; padding:8px; border-radius:6px;">
+              <input type="email" name="user_email" placeholder="Your Email" required
+                style="margin:6px 0; width:100%; padding:8px; border-radius:6px;">
+              <textarea name="message" placeholder="Your Message" required
+                style="margin:6px 0; width:100%; padding:8px; border-radius:6px; height:100px;"></textarea>
+              <button type="submit" class="btn" style="margin-top:10px;">Send Message</button>
+              <p id="status" style="margin-top:10px; font-size:14px; color:gray;"></p>
+            </form>
+            <p style="margin:10px 0 0"><strong>Email:</strong> <a href="mailto:sairaluqman366@gmail.com"
+                target="_blank">sairaluqman366@gmail.com</a></p>
             <p style="margin:6px 0 0"><strong>Phone:</strong> +92 3136756843</p>
-            <p style="margin:6px 0 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sairaluqman/"  target="_blank" rel="noopener">sairaluqman</a></p>
-            <p style="margin:6px 0 0"><strong>GitHub:</strong> <a href="https://github.com/sairamalik123" target="_blank" rel="noopener">sairamalik123</a></p>
+            <p style="margin:6px 0 0"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sairaluqman/"
+                target="_blank" rel="noopener">sairaluqman</a></p>
+            <p style="margin:6px 0 0"><strong>GitHub:</strong> <a href="https://github.com/sairamalik123"
+                target="_blank" rel="noopener">sairamalik123</a></p>
             <div style="margin-top:14px">
-              <a class="btn" style="color: white; margin-right: 1%" href="assets/SairaCV.pdf" target="_blank" download>Download Resume</a>
+              <a class="btn" style="color: white; margin-right: 1%" href="assets/SairaCV.pdf" target="_blank"
+                download>Download Resume</a>
               <a class="btn ghost" style="margin-top: 5%;" href="#top">Back to top</a>
             </div>
           </div>
@@ -285,13 +345,21 @@
           <div class="card">
             <h2>Quick Pitch</h2>
             <p>
-              System Engineer & Full-stack developer with a Computer Engineering background. Skilled in MERN, Blockchain, AI/ML, and automation. 
-              Experienced across internships, leadership roles, and professional projects — passionate about building secure, scalable, and user-friendly systems.
+              System Engineer & Full-stack developer with a Computer Engineering background. Skilled in MERN,
+              Blockchain, AI/ML, and automation.
+              Experienced across internships, leadership roles, and professional projects — passionate about building
+              secure, scalable, and user-friendly systems.
             </p>
             <div class="kpis">
-              <div class="kpi"><strong>Secure</strong><div>Blockchain & OTP flows</div></div>
-              <div class="kpi"><strong>Scalable</strong><div>Data-driven solutions</div></div>
-              <div class="kpi"><strong>Innovative</strong><div>AI + automation</div></div>
+              <div class="kpi"><strong>Secure</strong>
+                <div>Blockchain & OTP flows</div>
+              </div>
+              <div class="kpi"><strong>Scalable</strong>
+                <div>Data-driven solutions</div>
+              </div>
+              <div class="kpi"><strong>Innovative</strong>
+                <div>AI + automation</div>
+              </div>
             </div>
           </div>
         </div>
@@ -299,13 +367,14 @@
     </section>
   </main>
 
-<footer>
-  <div class="container"  style="text-align: center;">
-    © <span id="year"></span> Saira Luqman · System Engineer | Full-Stack Developer
-  </div>
-</footer>
+  <footer>
+    <div class="container" style="text-align: center;">
+      © <span id="year"></span> Saira Luqman · System Engineer | Full-Stack Developer
+    </div>
+  </footer>
 
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
