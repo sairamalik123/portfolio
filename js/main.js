@@ -36,21 +36,21 @@ const observer = new IntersectionObserver(entries => {
 revealElements.forEach(el => observer.observe(el));
 
 // Initialize EmailJS
-(function() {
-  emailjs.init("jevU5yT0X2wtuci16"); // Replace with your actual Public Key
-})();
+// (function() {
+//   emailjs.init("jevU5yT0X2wtuci16"); // Replace with your actual Public Key
+// })();
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+// document.getElementById("contact-form").addEventListener("submit", function(event) {
+//   event.preventDefault();
 
-  emailjs.sendForm("service_56ua4wk", "template_kywyazi", this)
-    .then(function() {
-      document.getElementById("status").innerText = "✅ Message sent successfully!";
-    }, function(error) {
-      document.getElementById("status").innerText = "❌ Failed to send. Try again.";
-      console.error("EmailJS Error:", error);
-    });
-});
+//   emailjs.sendForm("service_56ua4wk", "template_kywyazi", this)
+//     .then(function() {
+//       document.getElementById("status").innerText = "✅ Message sent successfully!";
+//     }, function(error) {
+//       document.getElementById("status").innerText = "❌ Failed to send. Try again.";
+//       console.error("EmailJS Error:", error);
+//     });
+// });
 
 // Contact Form Submission with EmailJS
 document.getElementById("contact-form").addEventListener("submit", function(e) {

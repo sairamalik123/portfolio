@@ -204,6 +204,8 @@ footer{padding:26px 0;color:var(--muted);border-top:1px solid color-mix(in oklab
     border-radius: 12px;
     box-shadow: var(--shadow);
     z-index: 1000;
+    background-color: black;
+    color: white;
   }
 
   .links.active {
